@@ -1,0 +1,28 @@
+[workspace]
+members = [
+    "wqms",
+    "wqms-common",
+    "wqms-mio",
+    "wqms-host",
+    "labcodec"
+    # "wqms-net",
+    # "wqms-cpu",
+    # "wqms-derive",
+    # "wqms-memory",
+    # "wqms-disk",
+#    "wqms-process",
+#    "wqms-virt",
+#    "wqms-winservice",
+]
+default-members = ["wqms", "wqms-common", "wqms-mio", "wqms-host"]
+
+exclude=[ "roadmap/*" ]
+
+
+
+# [patch.crates-io]
+# http-service = { git = 'https://github.com/prasannavl/http-service' }
+# awaiting for this PRs to be published
+# https://github.com/rust-lang-nursery/futures-rs/pull/1627
+# https://github.com/rust-lang-nursery/futures-rs/pull/1618
+# futures-preview = { git = "https://github.com/rust-lang-nursery/futures-rs", rev = "14cf135b41bff10ac4139d914e585e32bacfcd7a" }

@@ -1,0 +1,37 @@
+[package]
+name = "wqms"
+version = "0.0.1"
+authors = ["asmolkov <self@svartalf.info>"]
+edition = "2018"
+description = "Water quality monitoring platform framework"
+keywords = ["mio","can", "system", "information"]
+categories = ["asynchronous", "os"]
+repository = "https://github.com/lar-ag/wqms-core"
+readme = "README.md"
+license = "Apache-2.0 OR MIT"
+
+[badges]
+maintenance = { status = "experimental" }
+
+[dependencies]
+wqms-common = { version = "0.0.1", path = "../wqms-common" }
+wqms-mio = { version = "0.0.1", path = "../wqms-mio" }
+# wqms-derive = { version = "0.0.2", path = "../wqms-derive" }
+# wqms-host = { version = "0.0.2", path = "../wqms-host" }
+# wqms-cpu = {version = "0.0.2", path = "../wqms-cpu" }
+# wqms-memory = {version = "0.0.2", path = "../wqms-memory" }
+# wqms-disk = {version = "0.0.2", path = "../wqms-disk" }
+# wqms-net = {version = "0.0.2", path = "../wqms-net" }
+
+[features]
+doc = [
+    "wqms-common/doc",
+    # "wqms-host/doc",
+    # "wqms-cpu/doc",
+    # "wqms-memory/doc",
+    # "wqms-disk/doc",
+#    "wqms-net/doc",
+]
+
+[package.metadata.docs.rs]
+features = ["doc"]

@@ -1,22 +1,57 @@
+[package]
+name = "wqa"
+version = "0.0.2"
+authors = ["asmolkov <asmolkov@lar.com>"]
+edition = "2018"
+description = "Water quality monitoring platform framework"
+keywords = ["mio","can", "system", "information"]
+categories = ["asynchronous", "os"]
+repository = "https://github.com/lar-ag/wqa-core"
+readme = "README.md"
+license = "Apache-2.0 OR MIT"
+
+[badges]
+maintenance = { status = "experimental" }
+
+[dependencies]
+wqa-common = { path = "wqa-common" }
+wqa-derive = { path = "wqa-derive" }
+wqa-mio =    { path = "wqa-mio" }
+wqa-host =   { path = "wqa-host" }
+wqa-net =    { path = "wqa-net" }
+wqa-cpu =    { path = "wqa-cpu" }
+wqa-memory = { path = "wqa-memory"}
+wqa-disk =   { path = "wqa-disk"}
+wqa-process= { path = "wqa-process"}
+
+[features]
+doc = [
+    "wqa-common/doc",
+    "wqa-mio/doc",
+    # "wqa-host/doc",
+    # "wqa-cpu/doc",
+    # "wqa-memory/doc",
+    # "wqa-disk/doc",
+#    "wqa-net/doc",
+]
+
 [workspace]
 members = [
-    "wqms",
-    "wqms-common",
-    "wqms-mio",
-    "wqms-host",
-    "labcodec"
-    # "wqms-net",
-    # "wqms-cpu",
-    # "wqms-derive",
-    # "wqms-memory",
-    # "wqms-disk",
-#    "wqms-process",
-#    "wqms-virt",
-#    "wqms-winservice",
+    "wqa-common",
+    "wqa-derive",
+    "wqa-mio",
+    "wqa-host",
+    "wqa-net",
+    # "wqa-cpu",
+    # "wqa-memory",
+    # "wqa-disk",
+#    "wqa-process",
+#    "wqa-virt",
+#    "wqa-winservice",
 ]
-default-members = ["wqms", "wqms-common", "wqms-mio", "wqms-host"]
+default-members = ["wqa-derive","wqa-common", "wqa-mio", "wqa-host", "wqa-net"]
 
-exclude=[ "roadmap/*" ]
+exclude=[ "roadmap/*", ".example/*"]
 
 
 

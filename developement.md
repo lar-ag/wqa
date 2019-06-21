@@ -26,11 +26,11 @@ Where:
 use crate::sys;
 
 /// System CPU stats
-#[derive(wqms_derive::ImplWrap)]
+#[derive(wqa_derive::ImplWrap)]
 pub struct CpuStats(sys::CpuStats);
 ```
 
-`wqms_derive::ImplWrap` is a `proc-macro` which generates `AsRef`, `AsMut` and `From` implementations,
+`wqa_derive::ImplWrap` is a `proc-macro` which generates `AsRef`, `AsMut` and `From` implementations,
 which allows to work with the "inner" `sys::CpuStats` struct.
 
 Default implementation for struct **MUST** have only these methods, which can be
@@ -53,13 +53,13 @@ but we can't expose it here, because it would not be portable.\
 Instead, we should create the `CpuStatsExt` trait at the `os/linux/stats.rs`:
 
 ```rust
-#[wqms_derive::os_ext_for(crate::CpuStats, cfg(target_os = "linux"))]
+#[wqa_derive::os_ext_for(crate::CpuStats, cfg(target_os = "linux"))]
 pub trait CpuStatsExt {
     fn soft_interrupts(&self) -> u64;
 }
 ```
 
-Another `proc-macro` `wqms_derive::os_ext_for` will generate implementation
+Another `proc-macro` `wqa_derive::os_ext_for` will generate implementation
 of our `CpuStatsExt` for `crate::CpuStats` and add the feature gate: `#[cfg(target_os = "linux")]`
 
 ## Platform-specific
@@ -97,7 +97,7 @@ Our `sys/linux/times.rs` should declare one function:
 
 ```rust
 pub fn cpu_times() -> impl Future<Item=CpuStats, Error=Error> {
-    wqms_common::utils::fs::read_into("/proc/stat")
+    wqa_common::utils::fs::read_into("/proc/stat")
 }
 ```
 
@@ -116,7 +116,7 @@ pub fn stats() -> impl Future<Item=CpuStats, Error=Error> {
 }
 ```
 
-Since `wqms_derive::ImplWrap` macro generates `From<sys::CpuStats for CpuStats` implementation,
+Since `wqa_derive::ImplWrap` macro generates `From<sys::CpuStats for CpuStats` implementation,
 all we need now is to call platform-specific function and wrap result into public struct.
 
 Same thing applies to all structs and functions returning `Future`s and `Stream`s --

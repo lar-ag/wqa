@@ -1,6 +1,6 @@
 # Roadmap
 
-**STATE:** `00|01`
+**STATE:** `00|02`
 **TODO:** [task](roadmap/t11.md)
 <!-- NOTE: keep the above in sync with README.md -->
 
@@ -27,7 +27,7 @@ See [README.md] and [tips.md] for the overview, goals, audience, and prerequisit
 
 ## 00-training
 **Themen:** `can`,`api`, `hal`, `hardware`, `integration`, `lernen`, `runtime` , `async`
-**Package:** `mio`, `wqms-core`, `rust_info`, `Rocket`, `runtime`, `talent-plan`
+**Package:** `mio`, `wqa-core`, `rust_info`, `Rocket`, `runtime`, `talent-plan`
 
 ## 01-architecture
 

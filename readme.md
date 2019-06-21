@@ -1,4 +1,4 @@
-# `wqms-core`
+# `wqa-core`
 
 Water quality monitor IO.
 
@@ -12,7 +12,7 @@ Water quality monitor IO.
 ├── hello.odt
 ├── hello.sqlite3
 └── somearchive.zip
-├── wqms 
+├── wqa
 │ ├── greeting.docx
 │ └── inner.tar.gz
 │ └── greeting.pdf
@@ -33,6 +33,6 @@ Water quality monitor IO.
 
 At the moment it is in MVP phase, so probably feature you need is still missing.
 
-Check out [Github projects page](https://github.com/lar-ag/wqms-io/projects)
+Check out [Github projects page](https://github.com/lar-ag/wqa-io/projects)
 for more information.
 

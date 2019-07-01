@@ -1,0 +1,15 @@
+/target/
+**/*.rs.bk
+Cargo.lock
+.col
+.ai
+.fs
+.vscode
+.col
+.example
+.exp
+.async
+.cli
+.ecs
+.col
+.vscode

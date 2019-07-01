@@ -27,7 +27,7 @@ in the README.
 - where to ask questions
 - futures
 - tokio
-- mio?
+- api?
 - async/await? - maybe future iterations
 - Pin?
 - generic placeholder idiom - let foo: Vec<_> =

@@ -27,12 +27,12 @@ See [README.md] and [tips.md] for the overview, goals, audience, and prerequisit
 
 ## 00-training
 **Themen:** `can`,`api`, `hal`, `hardware`, `integration`, `lernen`, `runtime` , `async`
-**Package:** `mio`, `wqa-core`, `rust_info`, `Rocket`, `runtime`, `talent-plan`
+**Package:** `api`, `wqa-core`, `rust_info`, `Rocket`, `runtime`, `talent-plan`
 
 ## 01-architecture
 
 **Themen:** `key-store`,`fs`, `database`, `measurement`, `logger`, `data-model`
-**Package:** `sled`, `miofs`, `planer`, `logger`
+**Package:** `sled`, `apifs`, `planer`, `logger`
 
 [Project](/.roadmap/01-architecture/)
 - Package layout inspierd [heim].

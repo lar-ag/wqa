@@ -1,0 +1,39 @@
+[package]
+name = "wqa"
+version = "0.0.2"
+authors = ["smolkov"]
+edition = "2018"
+description = ""
+keywords = ["wqa", "system", "information"]
+categories = ["asynchronous", "os", "analyse"]
+repository = "https://github.com/lar-ag/wqa-core"
+readme = "README.md"
+license = "Apache-2.0 OR MIT"
+
+[badges]
+maintenance = { status = "experimental" }
+
+[dependencies]
+# wqa-common = { version = "0.0.2", path = "../wqa-common" }
+wqa-common =   { path = "../wqa-common" }
+wqa-derive =   { path = "../wqa-derive" }
+wqa-log =      { path = "../wqa-log"}
+wqa-measure=   { path = "../wqa-measure"}
+wqa-canbus =      { path = "../wqa-canbus" }
+wqa-process =  { path = "../wqa-process"}
+wqa-host =     { path = "../wqa-host" }
+wqa-net =      { path = "../wqa-net" }
+# wqa-cpu =    { path = "../wqa-cpu" }
+# wqa-memory = { path = "../wqa-memory"}
+# wqa-disk =   { path = "../wqa-disk"}
+# automata =   { path = "../automata"}
+
+
+[features]
+doc = [
+    "wqa-common/doc",
+    # "wqa-derive/doc",
+]
+
+[package.metadata.docs.rs]
+features = ["doc"]
